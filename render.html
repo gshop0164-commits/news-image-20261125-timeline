@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kronologi — 25 November 2026</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1024px; height: 1024px; }
+  body {
+    background: #f5f0e4;
+    color: #1b1b1b;
+    font-family: "Noto Sans", Arial, Helvetica, sans-serif;
+    padding: 26px 30px 20px 30px;
+    overflow: hidden;
+  }
+  .serif { font-family: "Noto Serif", Georgia, "Times New Roman", serif; }
+
+  /* ---------- masthead ---------- */
+  .masthead { display: flex; justify-content: space-between; align-items: flex-end; height: 64px; }
+  .masthead .brand { font-size: 46px; line-height: 1; font-weight: 900; letter-spacing: 5px; }
+  .masthead .brand em { font-style: normal; color: #b3202c; }
+  .masthead .date { text-align: right; }
+  .masthead .date .d1 { font-size: 19px; font-weight: 800; letter-spacing: 2px; }
+  .masthead .date .d2 { font-size: 12px; letter-spacing: 3px; color: #6b6252; margin-top: 4px; }
+  .rule-double { border-top: 3px solid #1b1b1b; border-bottom: 1px solid #1b1b1b; height: 5px; margin: 8px 0 14px 0; }
+
+  /* ---------- hero ---------- */
+  .hero {
+    height: 228px;
+    background: #0e1a38;
+    background-image:
+      radial-gradient(1.5px 1.5px at 12% 22%, #ffffff 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 30% 70%, #ffffff 50%, transparent 51%),
+      radial-gradient(1px 1px at 47% 30%, #ffffff 50%, transparent 51%),
+      radial-gradient(2px 2px at 62% 18%, #ffffff 50%, transparent 51%),
+      radial-gradient(1px 1px at 78% 62%, #ffffff 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 90% 28%, #ffffff 50%, transparent 51%),
+      radial-gradient(1px 1px at 55% 82%, #ffffff 50%, transparent 51%),
+      radial-gradient(1px 1px at 22% 48%, #ffffff 50%, transparent 51%),
+      linear-gradient(115deg, #0e1a38 0%, #12244f 55%, #1a2f5e 100%);
+    color: #fff;
+    display: flex;
+    padding: 20px 26px;
+  }
+  .hero .main { flex: 1; }
+  .hero .kicker { font-size: 12.5px; font-weight: 800; letter-spacing: 2.5px; color: #e8b64c; }
+  .hero h1 { font-size: 52px; line-height: 1.02; font-weight: 900; margin-top: 8px; letter-spacing: 0.5px; }
+  .hero .sub { font-size: 15.5px; line-height: 1.45; color: #d7deee; margin-top: 10px; max-width: 620px; }
+  .hero .sub b { color: #fff; }
+  .hero .times { width: 190px; border-left: 1px solid rgba(255,255,255,0.35); padding-left: 18px; margin-left: 18px; }
+  .hero .times .t { margin-bottom: 14px; }
+  .hero .times .t .tv { font-size: 24px; font-weight: 800; letter-spacing: 1px; }
+  .hero .times .t .tl { font-size: 11px; letter-spacing: 2px; color: #aeb9d4; margin-top: 2px; }
+  .hero .times .crew { font-size: 12.5px; line-height: 1.5; color: #d7deee; }
+
+  /* ---------- timeline ---------- */
+  .tl-head { display: flex; align-items: baseline; gap: 12px; margin-top: 16px; height: 24px; }
+  .tl-head .th { font-size: 14px; font-weight: 800; letter-spacing: 2.5px; }
+  .tl-head .tn { font-size: 12px; color: #6b6252; letter-spacing: 1px; }
+  .tl-head .line { flex: 1; border-top: 1px solid #b9ad93; }
+  .timeline { position: relative; margin-top: 6px; height: 452px; }
+  .spine { position: absolute; left: 118px; top: 8px; bottom: 8px; width: 2px; background: #c9b98f; }
+  .row { display: flex; align-items: flex-start; height: 75px; }
+  .row .when { width: 96px; text-align: right; padding-right: 14px; padding-top: 4px; }
+  .row .when .wt { font-size: 13px; font-weight: 800; letter-spacing: 1.5px; color: #b3202c; }
+  .row .when .wu { font-size: 10.5px; color: #6b6252; letter-spacing: 1px; margin-top: 2px; }
+  .row .dot { width: 46px; display: flex; justify-content: center; padding-top: 7px; position: relative; z-index: 1; }
+  .row .dot i { display: block; width: 13px; height: 13px; border-radius: 50%; background: #c9a227; border: 2.5px solid #f5f0e4; box-shadow: 0 0 0 1.5px #c9a227; }
+  .row .txt { flex: 1; padding-top: 1px; }
+  .row .txt h2 { font-size: 20.5px; line-height: 1.15; font-weight: 800; }
+  .row .txt p { font-size: 14px; line-height: 1.4; color: #3d3a33; margin-top: 4px; }
+
+  /* ---------- strip ---------- */
+  .strip { display: flex; gap: 22px; border-top: 2px solid #1b1b1b; padding-top: 12px; margin-top: 4px; height: 108px; }
+  .strip .cell { flex: 1; }
+  .strip .cell + .cell { border-left: 1px solid #c9bda1; padding-left: 22px; }
+  .strip .k { font-size: 10.5px; font-weight: 800; letter-spacing: 2px; color: #b3202c; }
+  .strip h3 { font-size: 15.5px; line-height: 1.25; font-weight: 800; margin-top: 5px; }
+  .strip p { font-size: 12.5px; line-height: 1.4; color: #3d3a33; margin-top: 4px; }
+
+  /* ---------- footer ---------- */
+  .foot { display: flex; justify-content: space-between; margin-top: 10px; font-size: 10.5px; color: #6b6252; letter-spacing: 0.8px; }
+</style>
+</head>
+<body>
+  <div class="masthead">
+    <div class="brand serif">KRONO<em>LOGI</em></div>
+    <div class="date">
+      <div class="d1">RABU, 25 NOVEMBER 2026</div>
+      <div class="d2">THE DAY IN WORLD NEWS &middot; ALL TIMES UTC</div>
+    </div>
+  </div>
+  <div class="rule-double"></div>
+
+  <div class="hero">
+    <div class="main">
+      <div class="kicker">SPACE &middot; FIRST FOREIGN ASTRONAUT ABOARD TIANGONG</div>
+      <h1 class="serif">Pakistan reaches orbit</h1>
+      <div class="sub">China&rsquo;s <b>Shenzhou-24</b> carries <b>Muhammad Zeeshan Ali</b> &mdash; the first
+        Pakistani in space and the first foreign astronaut to visit the Tiangong station &mdash;
+        alongside commander <b>Tang Hongbo</b> and <b>Wu Yi</b>. Ali will spend about a week
+        aboard, running Pakistani science experiments.</div>
+    </div>
+    <div class="times">
+      <div class="t"><div class="tv">00:18</div><div class="tl">UTC &middot; LAUNCH</div></div>
+      <div class="t"><div class="tv">03:56</div><div class="tl">UTC &middot; DOCKING</div></div>
+      <div class="crew">Crew of three<br>Long March 2F rocket<br>Jiuquan, China</div>
+    </div>
+  </div>
+
+  <div class="tl-head">
+    <div class="th">THE DAY, HOUR BY HOUR</div>
+    <div class="tn">Six stories as they broke</div>
+    <div class="line"></div>
+  </div>
+
+  <div class="timeline">
+    <div class="spine"></div>
+
+    <div class="row">
+      <div class="when"><div class="wt">MORNING</div><div class="wu">MIDDLE EAST</div></div>
+      <div class="dot"><i></i></div>
+      <div class="txt">
+        <h2 class="serif">Houthis strike Ras Tanura refinery</h2>
+        <p>Yemen&rsquo;s Houthis say they attacked Saudi Arabia&rsquo;s Ras Tanura oil refinery, causing fires &mdash; a day after a Houthi strike on a Riyadh tower wounded 11.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="when"><div class="wt">MORNING</div><div class="wu">SUDAN</div></div>
+      <div class="dot"><i></i></div>
+      <div class="txt">
+        <h2 class="serif">19 killed in Sudan drone strikes</h2>
+        <p>Drone strikes by the paramilitary Rapid Support Forces kill 19 civilians and wound 20 more in two Sudanese cities, rights lawyers say.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="when"><div class="wt">MIDDAY</div><div class="wu">UKRAINE</div></div>
+      <div class="dot"><i></i></div>
+      <div class="txt">
+        <h2 class="serif">Zelensky: Ukraine needs &euro;115bn for 2027</h2>
+        <p>Kyiv appeals for &euro;115 billion in foreign aid for next year as the US defence secretary pauses Patriot missile supplies to Ukraine.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="when"><div class="wt">MIDDAY</div><div class="wu">LIBYA</div></div>
+      <div class="dot"><i></i></div>
+      <div class="txt">
+        <h2 class="serif">Ukraine drones sink Russian warship off Libya</h2>
+        <p>Two Libyan naval officers die in a Ukraine-claimed drone attack on Russian ships in Benghazi, raising fears of escalation in the Mediterranean.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="when"><div class="wt">AFTERNOON</div><div class="wu">TRADE</div></div>
+      <div class="dot"><i></i></div>
+      <div class="txt">
+        <h2 class="serif">Trump proposes tariffs on 14 partners</h2>
+        <p>Washington is poised to unveil new tariffs of 20&ndash;40% on 14 trading partners; Wall Street slides, with the S&amp;P 500 down 2.2% and the Nasdaq 3.2%.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="when"><div class="wt">EVENING</div><div class="wu">U.S.A.</div></div>
+      <div class="dot"><i></i></div>
+      <div class="txt">
+        <h2 class="serif">US charges 800 in global scam crackdown</h2>
+        <p>The Justice Department brings more than 400 cases against 800+ defendants in a worldwide sweep of scam networks and online fraud.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="strip">
+    <div class="cell">
+      <div class="k">IMMIGRATION</div>
+      <h3 class="serif">Abrego Garcia leaves US for Spain</h3>
+      <p>The Salvadoran man at the centre of a 20-month deportation fight departs voluntarily.</p>
+    </div>
+    <div class="cell">
+      <div class="k">ECONOMY</div>
+      <h3 class="serif">Eurozone inflation rises to 4.0%</h3>
+      <p>Eurostat reports higher prices across the euro area alongside new growth data.</p>
+    </div>
+    <div class="cell">
+      <div class="k">TECH</div>
+      <h3 class="serif">Amazon buys Decart to chase Nvidia</h3>
+      <p>Amazon&rsquo;s acquisition bets on software to close the hardware gap in AI chips.</p>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div>Sources: Reuters &middot; Xinhua &middot; AP &middot; Just Security &middot; Principia</div>
+    <div>KRONOLOGI &middot; 25 NOV 2026</div>
+  </div>
+</body>
+</html>
